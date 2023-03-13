@@ -59,15 +59,15 @@ function formatDate(date) {
   const day = date.getDate();
   const monthName = date.toLocaleDateString("ru", { month: "long" });
   const year = date.getFullYear();
-  
+
   const hours = prependZero(date.getHours());
   const minutes = prependZero(date.getMinutes());
-  
+
   const formattedDate = `${day} ${monthName} ${year}`;
   const formattedTime = `${hours}:${minutes}`;
 
   if (
-    today.getDate() === date.getDay() &&
+    today.getDate() === date.getDate() &&
     today.getMonth() === date.getMonth() &&
     today.getFullYear() === date.getFullYear()
   ) {
@@ -75,7 +75,7 @@ function formatDate(date) {
   }
 
   if (
-    today.getDate() - 1 === date.getDay() &&
+    today.getDate() - 1 === date.getDate() &&
     today.getMonth() === date.getMonth() &&
     today.getFullYear() === date.getFullYear()
   ) {
