@@ -67,7 +67,7 @@ function formatDate(date) {
   const formattedTime = `${hours}:${minutes}`;
 
   if (
-    today.getDay() === date.getDay() &&
+    today.getDate() === date.getDay() &&
     today.getMonth() === date.getMonth() &&
     today.getFullYear() === date.getFullYear()
   ) {
@@ -75,7 +75,7 @@ function formatDate(date) {
   }
 
   if (
-    today.getDay() - 1 === date.getDay() &&
+    today.getDate() - 1 === date.getDay() &&
     today.getMonth() === date.getMonth() &&
     today.getFullYear() === date.getFullYear()
   ) {
