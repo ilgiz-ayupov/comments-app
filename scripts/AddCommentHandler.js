@@ -116,6 +116,7 @@ class AddCommentHandler {
 
       this.resetForm(form);
       commentsList.append(newComment);
+      window.scrollTo(0, 0);
     }
   }
 

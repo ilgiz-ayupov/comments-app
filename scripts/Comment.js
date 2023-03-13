@@ -72,7 +72,7 @@ class Comment {
     const target = event.target;
     const btn = target.closest("button");
 
-    switch (btn.dataset.type) {
+    switch (btn?.dataset.type) {
       case "comment-delete-btn":
         this.onDeleteComment(target);
         break;
