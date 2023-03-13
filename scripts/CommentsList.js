@@ -17,7 +17,17 @@ class CommentsList {
     CommentsList.object = this;
   }
 
+  /**
+   * Добавляет новый комментарий в начало списка
+   * @param {string | HTMLElement} newComment
+   */
   append(newComment) {
-    this.list.insertAdjacentHTML("afterbegin", newComment);
+    if (typeof newComment === "string") {
+      this.list.insertAdjacentHTML("afterbegin", newComment);
+    }
+
+    if (newComment instanceof HTMLElement) {
+      this.list.prepend(newComment);
+    }
   }
 }

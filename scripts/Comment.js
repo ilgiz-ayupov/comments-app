@@ -1,4 +1,11 @@
 class Comment {
+  /**
+   *
+   * @param {string} username
+   * @param {string} comment
+   * @param {Date} date
+   * @returns {string}
+   */
   static createComment(username, comment, date) {
     return `
         <div class="comment" data-type="comment-item">
@@ -29,6 +36,10 @@ class Comment {
     `.trim();
   }
 
+  /**
+   *
+   * @param {HTMLElement} target
+   */
   onDeleteComment(target) {
     const comment = target.closest("[data-type='comment-item']");
     comment.dataset.state = "deleted";
@@ -40,15 +51,23 @@ class Comment {
     });
   }
 
+  /**
+   *
+   * @param {HTMLElement} target
+   */
   onLikedComment(target) {
     const comment = target.closest("[data-type='comment-item']");
-    if (comment.dataset.state === "liked") {
-      comment.dataset.state = "";
-    } else {
+    if (comment.dataset.state !== "liked") {
       comment.dataset.state = "liked";
+    } else {
+      comment.dataset.state = "";
     }
   }
 
+  /**
+   *
+   * @param {Event} event
+   */
   onClick(event) {
     const target = event.target;
     const btn = target.closest("button");
@@ -63,6 +82,10 @@ class Comment {
     }
   }
 
+  /**
+   *
+   * @param {Event} event
+   */
   handleEvent(event) {
     switch (event.type) {
       case "click":

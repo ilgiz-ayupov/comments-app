@@ -33,6 +33,10 @@ class AddCommentHandler {
     }
   }
 
+  /**
+   *
+   * @param {HTMLFormElement} form
+   */
   resetForm(form) {
     const inputs = form.querySelectorAll("input, textarea");
     for (const input of inputs) {
@@ -41,6 +45,10 @@ class AddCommentHandler {
     }
   }
 
+  /**
+   *
+   * @param {Event} event
+   */
   onChange(event) {
     const target = event.target;
 
@@ -65,6 +73,10 @@ class AddCommentHandler {
     }
   }
 
+  /**
+   *
+   * @param {Event} event
+   */
   onSubmit(event) {
     event.preventDefault();
     const form = event.target;
@@ -95,11 +107,7 @@ class AddCommentHandler {
     }
 
     if (!error) {
-      const newComment = Comment.createComment(
-        username,
-        comment,
-        datetime
-      );
+      const newComment = Comment.createComment(username, comment, datetime);
 
       let commentsList = CommentsList.object;
       if (!commentsList) {
@@ -111,6 +119,10 @@ class AddCommentHandler {
     }
   }
 
+  /**
+   *
+   * @param {Event} event
+   */
   handleEvent(event) {
     switch (event.type) {
       case "input":
