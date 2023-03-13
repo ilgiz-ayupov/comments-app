@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  background: lightgray;
+}
+
+div[data-type=error] {
+  color: red;
+  margin-top: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.header {
+  padding: 1rem 0;
+}
+.header__title {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.comment {
+  padding: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+}
+.comment[data-state=deleted] {
+  background: red;
+  color: white;
+  opacity: 0;
+  transition: all 500ms;
+}
+.comment[data-state=liked] .comment__like {
+  color: pink;
+}
+.comment[data-state=liked] .comment__like svg {
+  fill: pink;
+}
+.comment:not(:last-of-type) {
+  margin-bottom: 2rem;
+}
+.comment__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.comment__header-left {
+  display: flex;
+  align-items: center;
+}
+.comment__delete, .comment__like {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  transition: all 300ms;
+}
+.comment__delete:active, .comment__like:active {
+  transform: scale(0.8);
+}
+.comment__delete {
+  margin-left: 0.5rem;
+}
+.comment__delete:hover {
+  color: red;
+}
+.comment__like {
+  margin-top: 0.5rem;
+}
+.comment__like svg {
+  transition: fill 300ms;
+}
+.comment__like:hover {
+  color: pink;
+}
+
+.comments {
+  width: 80%;
+  margin: 2rem auto;
+}
+.comments__title {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.comments__list {
+  padding: 2rem;
+  min-height: 18rem;
+  max-height: 20rem;
+  overflow: auto;
+  border-radius: 1rem;
+  background: white;
+}
+
+.add-comment {
+  width: 40%;
+  margin: 2rem auto;
+}
+.add-comment__title {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.add-comment__block {
+  margin-bottom: 0.5rem;
+}
+.add-comment__label {
+  display: inline-block;
+  margin-bottom: 0.2rem;
+}
+.add-comment__input, .add-comment__textarea {
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.8rem;
+}
+.add-comment__input[data-state=invalid], .add-comment__textarea[data-state=invalid] {
+  border: 2px solid red;
+  color: red;
+}
+.add-comment__input[data-state=invalid]:focus, .add-comment__textarea[data-state=invalid]:focus {
+  outline: red;
+}
+.add-comment__input[data-state=success], .add-comment__textarea[data-state=success] {
+  border: 2px solid green;
+  color: green;
+}
+.add-comment__input[data-state=success]:focus, .add-comment__textarea[data-state=success]:focus {
+  outline: green;
+}
+.add-comment__textarea {
+  resize: vertical;
+  min-height: 12.5rem;
+}
+.add-comment__submit {
+  cursor: pointer;
+  font-weight: bold;
+  background: green;
+  border: none;
+  padding: 0.8rem;
+  color: white;
+  border-radius: 0.5rem;
+  border: 2px solid transparent;
+  transition: all 300ms;
+}
+.add-comment__submit:hover {
+  background: white;
+  border: 2px solid green;
+  color: green;
+}
+.add-comment__submit:active {
+  transform: scale(0.9);
+}/*# sourceMappingURL=index.css.map */

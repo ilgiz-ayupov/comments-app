@@ -1,0 +1,72 @@
+.comment {
+  padding: 1rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  border-radius: 1rem;
+
+  &[data-state="deleted"] {
+    background: red;
+    color: white;
+    opacity: 0;
+    transition: all 500ms;
+  }
+
+  &[data-state="liked"] &__like {
+    color: pink;
+
+    & svg {
+      fill: pink;
+    }
+  }
+
+  &:not(:last-of-type) {
+    margin-bottom: 2rem;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+
+    &-left {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__delete,
+  &__like {
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    background: none;
+    transition: all 300ms;
+
+    &:active {
+      transform: scale(0.8);
+    }
+  }
+
+  &__delete {
+    margin-left: 0.5rem;
+    &:hover {
+      color: red;
+    }
+  }
+
+  &__like {
+    margin-top: 0.5rem;
+    & svg {
+      transition: fill 300ms;
+    }
+
+    &:hover {
+      color: pink;
+    }
+  }
+}
