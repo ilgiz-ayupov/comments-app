@@ -30,4 +30,9 @@ class CommentsList {
       this.list.prepend(newComment);
     }
   }
+
+  static destroy() {
+    CommentsList.object.container.remove();
+    CommentsList.object = null;
+  }
 }

@@ -47,6 +47,9 @@ class Comment {
     comment.addEventListener("transitionend", () => {
       setTimeout(() => {
         comment.remove();
+        if (CommentsList.object?.list.children.length === 0) {
+          CommentsList.destroy();
+        }
       }, 300);
     });
   }

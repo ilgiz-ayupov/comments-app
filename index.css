@@ -98,15 +98,22 @@ div[data-type=error] {
 }
 
 .comments {
-  width: 80%;
+  max-width: 80%;
+  padding: 0 1rem;
+  margin: 0 auto;
   margin: 2rem auto;
+}
+@media (max-width: 768px) {
+  .comments {
+    max-width: 100%;
+  }
 }
 .comments__title {
   margin-bottom: 1rem;
   text-align: center;
 }
 .comments__list {
-  padding: 2rem;
+  padding: 1rem;
   min-height: 18rem;
   max-height: 20rem;
   overflow: auto;
@@ -115,8 +122,15 @@ div[data-type=error] {
 }
 
 .add-comment {
-  width: 40%;
+  max-width: 80%;
+  padding: 0 1rem;
+  margin: 0 auto;
   margin: 2rem auto;
+}
+@media (max-width: 768px) {
+  .add-comment {
+    max-width: 100%;
+  }
 }
 .add-comment__title {
   margin-bottom: 1rem;

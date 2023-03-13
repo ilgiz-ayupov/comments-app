@@ -30,6 +30,16 @@ div[data-type="error"] {
   margin-bottom: 0.8rem;
 }
 
+@mixin container {
+  max-width: 80%;
+  padding: 0 1rem;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
+}
+
 @import "./components/header";
 @import "./components/comment";
 @import "./components/comments-list";

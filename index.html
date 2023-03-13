@@ -8,47 +8,51 @@
     <title>Комментарии</title>
   </head>
   <body>
-    <form class="add-comment" id="add-comment" data-type="add-comment-form">
-      <h2 class="add-comment__title">Оставить комментарий</h2>
-      <div class="add-comment__block">
-        <label class="add-comment__label" for="add-comment-username"
-          >Ваше имя:</label
-        >
-        <input
-          name="username"
-          class="add-comment__input"
-          id="add-comment-username"
-          type="text"
-        />
-      </div>
-      <div class="add-comment__block">
-        <label class="add-comment__label" for="add-comment-comment"
-          >Комментарий</label
-        >
-        <textarea
-          name="comment"
-          class="add-comment__textarea"
-          id="add-comment-comment"
-        ></textarea>
-      </div>
-      <div class="add-comment__block">
-        <label class="add-comment__label" for="add-comment-date"
-          >Дата
-          <small>(Поле для тестирования формата даты Комментария)</small></label
-        >
-        <input
-          name="datetime"
-          class="add-comment__input"
-          id="add-comment-date"
-          type="datetime-local"
-        />
-      </div>
-      <button class="add-comment__submit" type="submit">Отправить</button>
-    </form>
+    <div class="container">
+      <form class="add-comment" id="add-comment" data-type="add-comment-form">
+        <h2 class="add-comment__title">Оставить комментарий</h2>
+        <div class="add-comment__block">
+          <label class="add-comment__label" for="add-comment-username"
+            >Ваше имя:</label
+          >
+          <input
+            name="username"
+            class="add-comment__input"
+            id="add-comment-username"
+            type="text"
+          />
+        </div>
+        <div class="add-comment__block">
+          <label class="add-comment__label" for="add-comment-comment"
+            >Комментарий</label
+          >
+          <textarea
+            name="comment"
+            class="add-comment__textarea"
+            id="add-comment-comment"
+          ></textarea>
+        </div>
+        <div class="add-comment__block">
+          <label class="add-comment__label" for="add-comment-date"
+            >Дата
+            <small
+              >(Поле для тестирования формата даты Комментария)</small
+            ></label
+          >
+          <input
+            name="datetime"
+            class="add-comment__input"
+            id="add-comment-date"
+            type="datetime-local"
+          />
+        </div>
+        <button class="add-comment__submit" type="submit">Отправить</button>
+      </form>
+    </div>
 
     <script src="./scripts/utils.js"></script>
-    <script src="./scripts/Comment.js"></script>
     <script src="./scripts/CommentsList.js"></script>
+    <script src="./scripts/Comment.js"></script>
     <script src="./scripts/AddCommentHandler.js"></script>
     <script src="./scripts/main.js"></script>
   </body>

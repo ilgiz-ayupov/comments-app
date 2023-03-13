@@ -1,5 +1,5 @@
 .add-comment {
-  width: 40%;
+  @include container;
   margin: 2rem auto;
 
   &__title {
